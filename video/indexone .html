@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+.hello{
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    height: 40px;  
+}
+.lol{
+   display: none;
+}
+.would{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    
+}
+.hide{
+  position: absolute;
+  top: 50%;
+  font-size: large;
+  cursor: pointer;
+    
+}
+.ppp{
+    display: none;
+}
+    body{
+        background-color: black;
+    }
+    .text-div{
+        width: 40%;
+        background-color: rgb(49, 7, 7);
+        color: white;
+        text-align: center;
+        
+    }
+    .font-select{
+        width: 40%;
+    }
+    p{
+        margin-bottom: 0%;
+    
+    }
+    </style>
+</head>
+<body>
+    <input type="password">
+    <button class="show">showide</button>
+    <br>
+    <input type="text" placeholder="name"> 
+    <!-- .chang practices -->
+    <div class="text-div">
+        <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae vitae dolorum tempore iure esse et ratione, maxime quo non perspiciatis cumque ex fugiat quis aperiam animi vero voluptas eveniet. Fugit Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis illum hic ducimus ad necessitatibus qui, animi architecto ut, voluptate est inventore quod consequatur iure ex ab blanditiis nam totam aliquid!n Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quo unde, dolorum dolore corporis officia dolorem quia architecto qui nam est minima cupiditate consectetur consequatur, totam fuga eius neque quasi?
+        </p>
+    </div>
+    <select class="font-select">
+        <option value="">Select font family</option>
+        <option  value="carsive">cursive</option>
+        <option value="sans-serif">sans-serif</option>
+        <option value="fantasy">fantasy</option>
+    </select>
+    <br>
+    <!-- .chAange end practices -->
+     <br>
+     <!-- hide and practices -->
+    <div class="bg-dark would">DETAILS  </div>
+    <span class="hide" style="color: white;">&times</span> 
+    <div class="bg-info ppp">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad beatae sequi numquam eligendi debitis incidunt corporis unde quia. Fuga sit saepe impedit hic dolorum architecto quas qui aut expedita temporibus!</p>
+    </div>
+    <!-- hide show practices end -->
+    <br>
+    <br>
+    <!-- for function practikces star -->
+  <div class="bg-dark khkhkh1 hello">DETAILS </div>
+  <div class="bg-info hghg1 lol">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad beatae sequi numquam eligendi debitis incidunt corporis unde quia. Fuga sit saepe impedit hic dolorum architecto quas qui aut expedita temporibus!</p>
+  </div>
+  <br>
+  <br>
+  <div class="bg-dark khkhkh2 hello">DETAILS </div>
+  <div class="bg-info hghg2 lol">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad beatae sequi numquam eligendi debitis incidunt corporis unde quia. Fuga sit saepe impedit hic dolorum architecto quas qui aut expedita temporibus!</p>
+  </div>
+    
+  <br>
+   <br>
+   <p class="iii">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores accusantium minima a, facilis reiciendis quibusdam magni veritatis iure qui laboriosam dolor, at hic ipsa doloremque placeat quisquam nostrum recusandae culpa?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iste animi velit sit reprehenderit magni accusamus. Beatae velit vel hic eveniet veniam quidem, voluptas provident suscipit harum expedita! In, iure!</p>
+<br>
+<br>
+   <p class="iii">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores accusantium minima a, facilis reiciendis quibusdam magni veritatis iure qui laboriosam dolor, at hic ipsa doloremque placeat quisquam nostrum recusandae culpa?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iste animi velit sit reprehenderit magni accusamus. Beatae velit vel hic eveniet veniam quidem, voluptas provident suscipit harum expedita! In, iure!</p>
+   <br>
+ 
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+ -   <script>
+        $(document).ready(function(){
+
+            $('input').focus(function(){
+                $(this).css('background-color' , 'gray')
+            })
+            $('input').blur(function(){
+                $(this).css('background-color' , 'white')
+            })
+
+
+
+
+
+    $('.font-select').change(function(){
+        let font = $(this).val();
+        console.log(font)
+        $('.text-div').css('font-family',font)
+    })
+     $('.would').click(function(){
+        $('.ppp').show();
+        // $('.ppp').fadeIn();
+        // $('.ppp').fadeToggle();
+     })
+     $('.hide').click(function(){
+        $('.ppp').hide();
+        // $('.ppp').fadeOut(6000);
+     })
+     for(let j = 1 ; j <=2 ; j++){
+        $('.khkhkh'+j).click(function(){
+         $('.hghg'+j).fadeToggle();
+        })
+     }
+     setTimeout(() => {
+        alert('hello would')
+     }, 4000);
+     $('.would').mouseenter(function(){
+            $(this).css('color','blue')
+        })
+        $('.would').mouseleave(function(){
+            $(this).css('color','green')
+        })
+        $('.hello').dblclick(function(){
+            $(this).css('color','red')
+        })
+        $('.hello').click(function(){
+            $(this).css('color','white')
+        })
+        $('body').keypress(function(){
+            $('.iii').css({'color':'green',
+            'font-weight':'bolder',
+            'font-size':'15px'
+                
+        })
+        })
+        $('body').keyup(function(){
+            $('.iii').css({'color':'green',
+            'font-weight':'bolder',
+            'font-size':'15px'
+                
+        })
+        })
+        $('body').keydown(function(){
+            $('.iii').css({'color':'white',
+            'font-weight':'bolder',
+            'font-size':'10px'
+                
+        })
+        })
+        $('.show').click(function(){
+            var type = $('input').attr('type')
+            if(type == 'password'){
+                $('input').attr('type', 'text')
+            }
+            else{
+                $('input').attr('type','password')
+            }
+           })
+           $('.')
+        })
+        
+    
+     
+    </script>
+</body>
+</html>
